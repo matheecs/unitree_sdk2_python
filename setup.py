@@ -7,15 +7,13 @@ setup(name='unitree_sdk2py',
       long_description=open('README.md').read(),
       long_description_content_type="text/markdown",
       license="BSD-3-Clause",
-      packages=find_packages(include=['unitree_sdk2py','unitree_sdk2py.*']),
+      packages=find_packages(include=['unitree_sdk2py', 'unitree_sdk2py.*']),
       description='Unitree robot sdk version 2 for python',
       project_urls={
-            "Source Code": "https://github.com/unitreerobotics/unitree_sdk2_python",
+          "Source Code": "https://github.com/matheecs/unitree_sdk2_python",
       },
-      python_requires='>=3.8',
+      python_requires='>=3.8,<3.11',  # cyclonedds does not support python 3.11+
       install_requires=[
-            "cyclonedds==0.10.2",
-            "numpy",
-            "opencv-python",
+          "cyclonedds==0.10.5",
       ],
       )
